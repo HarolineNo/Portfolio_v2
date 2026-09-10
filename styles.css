@@ -1,3 +1,13 @@
 body {
     background-color: powderblue;
 }
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
