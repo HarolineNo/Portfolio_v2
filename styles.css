@@ -1,5 +1,6 @@
+
 body {
-    background-color: powderblue;
+    background-color: rgb(238, 245, 255);
 }
 
 a {
@@ -9,5 +10,26 @@ a {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+header a {
+    color: rgb(89, 85, 121);
+}
+
+nav a:hover {
+    color:rgb(50, 48, 69);
+    text-decoration: underline;
+}
+
+.logo {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+.contact {
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid;
+    border-color: rgb(89, 85, 121);
 }
