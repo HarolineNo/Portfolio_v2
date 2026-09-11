@@ -1,6 +1,6 @@
 
 body {
-    background-color: rgb(238, 245, 255);
+    background-color: rgb(213, 231, 255);
 }
 
 a {
@@ -10,11 +10,17 @@ a {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: sticky;
 }
 
 header a {
     color: rgb(89, 85, 121);
+    padding: 0.2rem;
+}
+
+nav {
+    font-size: 1.15rem;
 }
 
 nav a:hover {
@@ -25,6 +31,7 @@ nav a:hover {
 .logo {
     font-family:'Times New Roman', Times, serif;
     font-weight: lighter;
+    font-size: 1.5rem;
 }
 
 .contact {
