@@ -12,15 +12,23 @@ header {
     align-items: center;
     justify-content: space-around;
     position: sticky;
+    background-color: rgba(255, 255, 255, 0.407);
+    border: 2px solid;
+    border-color: aliceblue;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
 }
 
 header a {
     color: rgb(89, 85, 121);
-    padding: 0.2rem;
 }
 
 nav {
+    display: flex;
     font-size: 1.15rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 nav a:hover {
