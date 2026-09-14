@@ -4,16 +4,36 @@ a {
     text-decoration: none;
 }
 
+.home-img {
+    display: flex;
+    border-radius: 25% 75% 29% 71% / 62% 51% 49% 38%;
+    background-color: blueviolet;
+    width: 25rem;
+    height: 25rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.home-img img{
+    display: flex;
+    width: 27rem;
+    height: 28rem;
+    align-items: center;
+    justify-content: center;
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background: rgba(0, 0, 0, 0.407);
     position: sticky;
-    background-color: rgba(255, 255, 255, 0.407);
-    border: 2px solid;
-    border-color: aliceblue;
-    border-radius: 25px;
-    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(0.25rem);
+    z-index: 100%;
 }
 
 header a {
@@ -44,6 +64,10 @@ nav a:hover {
     border-radius: 30px;
     border: 2px solid;
     border-color: rgb(89, 85, 121);
+}
+
+.contact:hover {
+    transform: scale(0.90);
 }
 
 .skills-imgs {
