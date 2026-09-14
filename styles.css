@@ -1,7 +1,4 @@
 
-body {
-    background-color: rgb(213, 231, 255);
-}
 
 a {
     text-decoration: none;
@@ -47,4 +44,9 @@ nav a:hover {
     border-radius: 30px;
     border: 2px solid;
     border-color: rgb(89, 85, 121);
+}
+
+.skills-imgs {
+    width: 5rem;
+    height: 5rem;
 }
