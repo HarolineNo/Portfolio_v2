@@ -26,14 +26,14 @@ a {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background: rgba(0, 0, 0, 0.407);
+    justify-content: center;
     position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
-    backdrop-filter: blur(0.25rem);
-    z-index: 100%;
+    z-index: 100;
+    padding: 1rem;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 300;
 }
 
 header a {
@@ -42,10 +42,10 @@ header a {
 
 nav {
     display: flex;
-    font-size: 1.15rem;
-    justify-content: center;
+    width: 40%;
+    font-size: 1.2rem;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-evenly;
 }
 
 nav a:hover {
@@ -54,9 +54,17 @@ nav a:hover {
 }
 
 .logo {
-    font-family:'Times New Roman', Times, serif;
-    font-weight: lighter;
+    display: flex;
     font-size: 1.5rem;
+    left: 2rem;
+    position: absolute;
+}
+
+.outside-nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 2rem;
 }
 
 .contact {
