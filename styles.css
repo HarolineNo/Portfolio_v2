@@ -1,5 +1,17 @@
 
-
+* {
+    font-family: 'Montserrat', 'sans-serif';
+}
+/*
+.home {
+    display: flex;
+    background-image: url("assets/images/clouds.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+}
+*/
 a {
     text-decoration: none;
 }
@@ -32,7 +44,6 @@ header {
     width: 100%;
     z-index: 100;
     padding: 1rem;
-    font-family: 'Montserrat', 'sans-serif';
     font-weight: 300;
 }
 
@@ -76,6 +87,24 @@ nav a:hover {
 
 .contact:hover {
     transform: scale(0.90);
+}
+
+.home {
+    display: flex;
+}
+
+.name {
+    font-size: 5rem;
+    font-weight: light;
+    margin: auto;
+}
+
+.home img {
+    display: flex;
+    width: 30%;
+    perspective: 300px;
+    transform: rotateY(45deg);
+    perspective: 300px;
 }
 
 .skills-imgs {
