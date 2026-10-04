@@ -93,6 +93,11 @@ nav a:hover {
     display: flex;
 }
 
+.home button {
+    border-radius: 2ch;
+    padding: 0.5rem 1.2rem;
+}
+
 .name {
     font-size: 5rem;
     font-weight: light;
@@ -107,7 +112,7 @@ nav a:hover {
     perspective: 300px;
 }
 
-.skills-imgs {
+.skills-img {
     width: 5rem;
     height: 5rem;
 }
