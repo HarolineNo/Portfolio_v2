@@ -112,6 +112,11 @@ nav a:hover {
     perspective: 300px;
 }
 
+.titles {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
 .about {
     display: flex;
 }
@@ -128,4 +133,9 @@ nav a:hover {
     border: 1px solid black;
     border-radius: 1.5ch;
     margin: 0 1rem 1.5rem;
+}
+
+.item, .cert {
+    display: flex;
+    justify-content: space-between;
 }
