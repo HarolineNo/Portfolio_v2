@@ -16,25 +16,6 @@ a {
     text-decoration: none;
 }
 
-.home-img {
-    display: flex;
-    border-radius: 25% 75% 29% 71% / 62% 51% 49% 38%;
-    background-color: blueviolet;
-    width: 25rem;
-    height: 25rem;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-}
-
-.home-img img{
-    display: flex;
-    width: 27rem;
-    height: 28rem;
-    align-items: center;
-    justify-content: center;
-}
-
 header {
     display: flex;
     align-items: center;
@@ -91,6 +72,18 @@ nav a:hover {
 
 .home {
     display: flex;
+    perspective: 1000px;
+}
+
+.home-img {
+    display: flex;
+    transform: rotateY(-30deg);
+}
+
+.home-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 1.5ch;
 }
 
 .home button {
@@ -104,16 +97,8 @@ nav a:hover {
     margin: auto;
 }
 
-.home img {
-    display: flex;
-    width: 30%;
-    perspective: 300px;
-    transform: rotateY(45deg);
-    perspective: 300px;
-}
-
 .titles {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.5rem;
 }
 
@@ -135,7 +120,19 @@ nav a:hover {
     margin: 0 1rem 1.5rem;
 }
 
-.item, .cert {
+.item, .cert, .job {
     display: flex;
     justify-content: space-between;
+}
+
+.item-title {
+    font-weight: 500;
+}
+
+.item-info {
+    font-style: italic;
+}
+
+footer {
+    background-color: rgb(89, 85, 121);
 }
