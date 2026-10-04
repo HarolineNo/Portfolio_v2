@@ -112,7 +112,20 @@ nav a:hover {
     perspective: 300px;
 }
 
+.about {
+    display: flex;
+}
+
+.skills {
+    right: 2rem;
+    position: absolute;
+}
+
 .skills-img {
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1.5ch;
+    margin: 0 1rem 1.5rem;
 }
