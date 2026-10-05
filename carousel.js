@@ -7,15 +7,15 @@ let index = 0;
 export function projectCarousel() {
     const projectCard = document.querySelectorAll(".project-card");
 
-    if (index > projectCard.length - 3) {
+    if (index > projectCard.length - 1) {
         index = 0
     };
 
     if (index < 0) {
-        index = projectCard.length - 3;
+        index = projectCard.length - 1;
     };
 
-    projectContainer.style.transform = `translateX(-${index * 35}%)`;
+    projectContainer.style.transform = `translateX(-${index * 100}%)`;
 }
 
 prevBtn.addEventListener('click', () => {

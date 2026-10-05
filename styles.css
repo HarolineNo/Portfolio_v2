@@ -14,6 +14,7 @@
     top: 0;
 }
 */
+
 a {
     text-decoration: none;
 }
@@ -28,6 +29,8 @@ header {
     z-index: 100;
     padding: 1rem;
     font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.352);
+    backdrop-filter: blur(10px);
 }
 
 header a {
@@ -142,6 +145,7 @@ body {
     border: 1px solid black;
     border-radius: 1.5ch;
     margin: 0 1rem 1.5rem;
+    background-color: rgb(197, 197, 197);
 }
 
 .container {
@@ -161,11 +165,30 @@ body {
 }
 
 .project-card {
+    display: flex;
+    flex: 0 0 100%;
+}
+
+.project-image {
     background-color: rgb(197, 197, 197);
     border-radius: 3.5ch;
     height: 25rem;
-    flex: 0 0 30%;
-    margin-right: 5%;
+    width: 50%;
+}
+
+.project-info {
+    margin-left: 2rem;
+}
+
+.tool-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-tools {
+    background-color: rgb(197, 197, 197);
+    border-radius: 10ch;
+    padding: 0.3rem 1.5rem;
 }
 
 .btn {
@@ -194,9 +217,18 @@ body {
 }
 
 .school {
+    padding: 0.5rem;
+}
+
+.school:hover {
     background-color: rgb(197, 197, 197);
     border-radius: 3ch;
-    padding: 0.5rem;
+}
+
+.job-container {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid black;
 }
 
 .item, .cert, .job {

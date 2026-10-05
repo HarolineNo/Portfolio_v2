@@ -14,13 +14,27 @@ export function card() {
             <div class="project-image">
                 <img src="${project.image}" title="${project.attribution}" style="width: 50px; height:50px">
             </div>
-            <div class="project-title">
-                ${project.title}
-            </div>
-            <div class="project-summary">
-                ${project.summary}
+            <div class="project-info">
+                <div class="project-title titles">
+                    ${project.title}
+                </div>
+                <div class="tool-container"></div>
+                <div class="project-summary">
+                    ${project.summary}
+                </div>
             </div>
         `;
+
+        const toolContainer = projectCard.querySelector(".tool-container");
+        
+        for (let tool of project.tool) {
+            let projectTool = document.createElement("span");
+            projectTool.className = "project-tools";
+
+            projectTool.textContent = tool;
+
+            toolContainer.appendChild(projectTool);
+        }
 
         projectContainer.appendChild(projectCard);
 
