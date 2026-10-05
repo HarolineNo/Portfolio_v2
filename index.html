@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script type="module" src="./make-card.js"></script>
         <title>Portfolio</title>
         <link rel="stylesheet" href="styles.css"/>
     </head>
@@ -30,7 +31,7 @@
             </div>
         </header>
 
-        <section class="home">
+        <section id="home">
             <div class="intro">
                 <div>
                     <p class="name">Haroline<br>Noesi</p>
@@ -39,46 +40,36 @@
                 </div>
             </div>
             <div class="home-img">
-                <img src="assets\images\laptop.png" title="https://www.magnific.com/free-vector/new-app-development-desktop_10276612.htm#fromView=search&page=4&position=11&uuid=3545a523-f407-4963-bbcd-5febfc37b3c6&track=ais_hybrid&query=software+development">
+                <img src="assets/images/laptop.png" title="https://www.magnific.com/free-vector/new-app-development-desktop_10276612.htm#fromView=search&page=4&position=11&uuid=3545a523-f407-4963-bbcd-5febfc37b3c6&track=ais_hybrid&query=software+development">
             </div>
         </section>
 
-        <section class="about">
+        <section id="about">
             <div class="about-me">
                 <p class="titles">About Me</p>
                 <p>[Placeholder Text]</p>
             </div>
             <div class="skills">
                 <div class="skills-first">
-                    <img class="skills-img" src="assets\images\html-5.png" title="https://www.flaticon.com/free-icons/html">
-                    <img class="skills-img" src="assets\images\css-3.png" title="https://www.flaticon.com/free-icons/css">
-                    <img class="skills-img" src="assets\images\js.png" title="https://www.flaticon.com/free-icons/javascript">
+                    <img class="skills-img" src="assets/images/html-5.png" title="https://www.flaticon.com/free-icons/html">
+                    <img class="skills-img" src="assets/images/css-3.png" title="https://www.flaticon.com/free-icons/css">
+                    <img class="skills-img" src="assets/images/js.png" title="https://www.flaticon.com/free-icons/javascript">
                 </div>
                 <div class="skills-second">
-                    <img class="skills-img" src="assets\images\java.png" title="https://www.flaticon.com/free-icons/java">
-                    <img class="skills-img" src="assets\images\python.png" title="https://www.flaticon.com/free-icons/python">
+                    <img class="skills-img" src="assets/images/java.png" title="https://www.flaticon.com/free-icons/java">
+                    <img class="skills-img" src="assets/images/python.png" title="https://www.flaticon.com/free-icons/python">
                 </div>
             </div>
         </section>
 
-        <section class="projects">
+        <section id="projects">
             <p class="titles">Projects</p>
-            <div class="project-info">
-                <div class="card">
-                    <div class="project-img">
-                        <img style="width: 50px; height: 50px;" src="assets\images\sticker1.png">
-                    </div>
-                    <div class="project-summary">
-                        [Placeholder text]
-                    </div>
-                </div>
-                <div class="project-explanation">
-                    [Placeholder text]
-                </div>
+            <div id="project-container">
+                <noscript>Sorry, your browser does not support JavaScript!</noscript>
             </div>
         </section>
 
-        <section class="education">
+        <section id="education">
             <p class="titles">Education</p>
             <div class="school">
                 <div class="item">
@@ -93,7 +84,7 @@
 
             <hr>
             
-            <div class="school">
+            <div id="school">
                 <div class="item">
                     <p>
                         <span class="item-title">Western Governors University</span> | 
@@ -106,7 +97,7 @@
 
         </section>
 
-        <section class="experience">
+        <section id="experience">
             <p class="titles">Experience</p>
             <div class="job">
                 <p>

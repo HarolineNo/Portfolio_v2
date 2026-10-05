@@ -76,7 +76,7 @@ body {
     margin: 0;
 }
 
-.home {
+#home {
     display: flex;
     perspective: 1000px;
 }
@@ -118,7 +118,7 @@ body {
     font-size: 1.5rem;
 }
 
-.about {
+#about {
     display: flex;
 }
 
@@ -136,11 +136,11 @@ body {
     margin: 0 1rem 1.5rem;
 }
 
-.project-info {
+#project-container {
     display: flex;
 }
 
-.card {
+.project-card {
     background-color: rgb(197, 197, 197);
     border-radius: 3ch;
     width: 35%;
