@@ -1,4 +1,5 @@
 import { projects } from './projects.js';
+import { projectCarousel } from './carousel.js';
 
 export function card() {
     const projectContainer = document.getElementById("project-container");
@@ -7,28 +8,26 @@ export function card() {
         let project = projects[i]
         
         let projectCard = document.createElement("div");
-        projectCard.className = "project-info";
+        projectCard.className = "project-card";
 
         projectCard.innerHTML = `
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="${project.image}" title="${project.attribution}" style="width: 50px; height:50px">
-                </div>
-                <div class="project-title">
-                    ${project.title}
-                </div>
-                <div class="project-summary">
-                    ${project.summary}
-                </div>
+            <div class="project-image">
+                <img src="${project.image}" title="${project.attribution}" style="width: 50px; height:50px">
             </div>
-            <div class="project-explanation">
-                ${project.explanation}
+            <div class="project-title">
+                ${project.title}
+            </div>
+            <div class="project-summary">
+                ${project.summary}
             </div>
         `;
 
         projectContainer.appendChild(projectCard);
 
     }
+
+    projectCarousel();
+
 }
 
 card();
