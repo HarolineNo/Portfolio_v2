@@ -1,3 +1,5 @@
+/*https://www.magnific.com/free-vector/naive-computer-engineer-stickers-collection_54169860.htm#fromView=search&page=5&position=15&uuid=80d2953d-545a-4263-960b-8edc4b81f1a6&track=ais_hybrid&query=coding*/
+
 
 * {
     font-family: 'Montserrat', 'sans-serif';
@@ -70,9 +72,24 @@ nav a:hover {
     transform: scale(0.90);
 }
 
+body {
+    margin: 0;
+}
+
 .home {
     display: flex;
     perspective: 1000px;
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.class {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .home-img {
@@ -81,7 +98,7 @@ nav a:hover {
 }
 
 .home-img img{
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 1.5ch;
 }
@@ -93,8 +110,7 @@ nav a:hover {
 
 .name {
     font-size: 5rem;
-    font-weight: light;
-    margin: auto;
+    margin-bottom: 0;
 }
 
 .titles {
@@ -120,6 +136,23 @@ nav a:hover {
     margin: 0 1rem 1.5rem;
 }
 
+.project-info {
+    display: flex;
+}
+
+.card {
+    background-color: rgb(197, 197, 197);
+    border-radius: 3ch;
+    width: 35%;
+    height: 25rem;
+}
+
+.school {
+    background-color: rgb(197, 197, 197);
+    border-radius: 3ch;
+    padding: 0.5rem;
+}
+
 .item, .cert, .job {
     display: flex;
     justify-content: space-between;
@@ -134,5 +167,5 @@ nav a:hover {
 }
 
 footer {
-    background-color: rgb(89, 85, 121);
+    background-color: rgb(197, 197, 197);
 }
