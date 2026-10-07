@@ -1,10 +1,6 @@
 /*https://www.magnific.com/free-vector/naive-computer-engineer-stickers-collection_54169860.htm#fromView=search&page=5&position=15&uuid=80d2953d-545a-4263-960b-8edc4b81f1a6&track=ais_hybrid&query=coding*/
 
 
-* {
-    font-family: 'Montserrat', 'sans-serif';
-}
-
 a {
     text-decoration: none;
 }
@@ -24,8 +20,9 @@ header {
 
 body {
     background-color: aliceblue;
-    margin: 0;
+    margin: 1rem;
     color:rgb(45, 55, 86);
+    font-family: 'Montserrat';
 }
 
 header a {
@@ -35,7 +32,8 @@ header a {
 nav {
     display: flex;
     width: 40%;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 500;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -47,8 +45,8 @@ nav a:hover {
 
 .logo {
     display: flex;
+    align-items: center;
     font-size: 1.5rem;
-    font-weight: 500;
     left: 2rem;
     position: absolute;
 }
@@ -60,12 +58,14 @@ nav a:hover {
     right: 2rem;
 }
 
-.contact {
+.contact, .resume-btn {
     padding: 0.7rem 1.3rem;
     color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
     border-radius: 30px;
-    background-color: rgb(125, 166, 223);
-    box-shadow: 0 -10px 30px rgba(57, 85, 126, 0.50) inset, 0 30px 50px -30px rgba(255, 255, 255, 0.75) inset;
+    background-color: rgb(132, 173, 231);
+    box-shadow: 0 -10px 20px -5px rgba(6, 51, 77, 0.5) inset, 0 30px 20px -30px rgba(237, 253, 255, 0.75) inset;
 }
 
 .contact:hover {
@@ -73,8 +73,13 @@ nav a:hover {
     color: rgb(125, 130, 223);
 }
 
-#home {
+.bi-arrow-right {
+    margin: 0.2rem;
+}
+
+.home-page {
     display: flex;
+    align-items: center;
     perspective: 1000px;
 }
 
@@ -84,10 +89,12 @@ nav a:hover {
     align-items: center;
 }
 
-.intro button {
-    border-radius: 50px;
-    padding: 0.5rem;
-    border: 1px solid rgb(50, 48, 69);
+.git-btn {
+    border: 1px solid rgb(45, 55, 86);
+    padding: 0.7rem 1.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 30px;
 }
 
 .class {
@@ -98,6 +105,7 @@ nav a:hover {
 .home-img {
     display: flex;
     transform: rotateY(-30deg);
+    justify-content: center;
 }
 
 .home-img img{
@@ -106,14 +114,10 @@ nav a:hover {
     border-radius: 1.5ch;
 }
 
-.home button {
-    border-radius: 2ch;
-    padding: 0.5rem 1.2rem;
-}
-
 .name {
     font-size: 5rem;
     margin-bottom: 0;
+    font-weight: 600;
 }
 
 .titles {
@@ -134,10 +138,10 @@ nav a:hover {
     width: 3rem;
     height: 3rem;
     padding: 1rem;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 1.5ch;
     margin: 0 1rem 1.5rem;
-    background-color: rgb(197, 197, 197);
+    background: linear-gradient(148deg,rgba(255, 255, 255, 0.50) 30%, rgba(167, 167, 167, 0.05) 50%, rgba(255, 255, 255, 0.50) 70%);
 }
 
 .container {
@@ -165,7 +169,6 @@ nav a:hover {
     background-color: rgb(197, 197, 197);
     border-radius: 3.5ch;
     height: 25rem;
-    box-shadow: -25px 26px 5px lightblue;
 }
 
 .project-info {
