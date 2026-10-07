@@ -12,7 +12,7 @@ export function card() {
 
         projectCard.innerHTML = `
             <div class="project-image">
-                <img src="${project.image}" title="${project.attribution}" style="width: 50px; height:50px">
+                <img src="${project.image}" title="${project.attribution}" style="width: 100%; height: 100%">
             </div>
             <div class="project-info">
                 <div class="project-title titles">
