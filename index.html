@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Explora&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script type="module" src="./make-card.js"></script>
         <title>Portfolio</title>
         <link rel="stylesheet" href="styles.css"/>
     </head>
@@ -38,11 +39,11 @@
                         <p class="name">Haroline<br>Noesi</p>
                         <p>[Current/Future Aspirations]</p>
                         <div class="home-btns">
-                            <a class="resume-btn">
+                            <a href="resume/" class="resume-btn">
                                 <i class="bi bi-person-fill"></i>
                                 Resume
                             </a>
-                            <a class="git-btn">
+                            <a href="github/" class="git-btn">
                                 <i class="bi bi-rocket-takeoff-fill"></i>
                                 GitHub
                             </a>
@@ -56,20 +57,58 @@
         </section>
 
         <section id="about">
-            <div class="about-me">
-                <p class="titles">About Me</p>
-                <p>[Placeholder Text]</p>
+            <div class="left-container">
+                <div class="about-me">
+                    <p class="titles">About Me</p>
+                    <p>[Placeholder Text]</p>
+                </div>
+                <div class="skills">
+                    <p style="font-weight: 600;">Skills</p>
+                    <div>
+                        <img class="skills-img" src="assets/images/html-5.png" title="https://www.flaticon.com/free-icons/html">
+                        <img class="skills-img" src="assets/images/css-3.png" title="https://www.flaticon.com/free-icons/css">
+                        <img class="skills-img" src="assets/images/js.png" title="https://www.flaticon.com/free-icons/javascript">
+                        <img class="skills-img" src="assets/images/java.png" title="https://www.flaticon.com/free-icons/java">
+                        <img class="skills-img" src="assets/images/python.png" title="https://www.flaticon.com/free-icons/python">
+                    </div>
+                </div>
             </div>
-            <div class="skills">
-                <div class="skills-first">
-                    <img class="skills-img" src="assets/images/html-5.png" title="https://www.flaticon.com/free-icons/html">
-                    <img class="skills-img" src="assets/images/css-3.png" title="https://www.flaticon.com/free-icons/css">
-                    <img class="skills-img" src="assets/images/js.png" title="https://www.flaticon.com/free-icons/javascript">
-                </div>
-                <div class="skills-second">
-                    <img class="skills-img" src="assets/images/java.png" title="https://www.flaticon.com/free-icons/java">
-                    <img class="skills-img" src="assets/images/python.png" title="https://www.flaticon.com/free-icons/python">
-                </div>
+            <div class="right-container">
+                <section id="education">
+                    <div class="title-container">
+                        <i class="bi bi-mortarboard-fill"></i>
+                        <p class="titles">Education</p>
+                    </div>
+                    <div class="school">
+                        <div class="item">
+                            <p>
+                                <span class="item-title">Western Governors University</span> | 
+                                <span>Remote</span>
+                            </p>
+                            <p>Oct. 2025 - Jan. 2027</p>
+                        </div>
+                        <p>Accelerated Bachelor's and Master's in Computer Science</p>
+                    </div>
+                </section>
+
+                <section id="experience">
+                    <div class="title-container">
+                        <i class="bi bi-briefcase-fill"></i>
+                        <p class="titles">Experience</p>
+                    </div>
+                    <div class="job-container">
+                        <div class="card-content">
+                            <div class="job">
+                                <p>
+                                    <span class="item-title">National STEM Honor Society</span> | 
+                                    <span>Remote</span>
+                                </p>
+                                <p>Jan. 2025 - Apr. 2025</p>
+                            </div>
+                            <p>[Description]</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
 
@@ -83,35 +122,6 @@
                 </div>
                 </div>
                 <button class="btn next">&gt;</button>
-            </div>
-        </section>
-
-        <section id="education">
-            <p class="titles">Education</p>
-            <div class="school">
-                <div class="item">
-                    <p>
-                        <span class="item-title">Western Governors University</span> | 
-                        <span class="item-info">Remote</span>
-                    </p>
-                    <p>Oct. 2025 - Jan. 2026</p>
-                </div>
-                <p>Accelerated Bachelor's and Master's in Computer Science</p>
-            </div>
-
-        </section>
-
-        <section id="experience">
-            <p class="titles">Experience</p>
-            <div class="job-container">
-                <div class="job">
-                    <p>
-                        <span class="item-title">National STEM Honor Society</span> | 
-                        <span class="item-info">Remote</span>
-                    </p>
-                    <p class="item-title">Jan. 2025 - Apr. 2025</p>
-                </div>
-                <p>[Description]</p>
             </div>
         </section>
 
