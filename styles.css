@@ -31,16 +31,15 @@ header a {
 
 nav {
     display: flex;
-    width: 40%;
-    font-size: 1rem;
+    width: 35%;
+    font-size: 0.9rem;
     font-weight: 500;
     align-items: center;
     justify-content: space-evenly;
 }
 
 nav a:hover {
-    color: rgb(125, 130, 223);
-    text-decoration: underline;
+    color: rgb(111, 176, 255);
 }
 
 .logo {
@@ -70,7 +69,7 @@ nav a:hover {
 
 .contact:hover {
     transform: scale(0.90);
-    color: rgb(125, 130, 223);
+    box-shadow: -5px 3px 7px rgba(16, 113, 170, 0.35);
 }
 
 .bi-arrow-right {
@@ -89,8 +88,14 @@ nav a:hover {
     align-items: center;
 }
 
+.home-btns {
+    display: flex;
+    gap: 1rem;
+}
+
 .git-btn {
-    border: 1px solid rgb(45, 55, 86);
+    border: 2px solid rgb(112, 159, 198);
+    color: rgb(112, 159, 198);
     padding: 0.7rem 1.3rem;
     font-size: 0.8rem;
     font-weight: 500;
