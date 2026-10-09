@@ -12,7 +12,8 @@ export function card() {
 
         projectCard.innerHTML = `
             <div class="project-image">
-                <img src="${project.image}" title="${project.attribution}" style="display: flex; width: 70%; height: 70%; margin-left: auto; filter: drop-shadow(-50px 50px 0 rgb(6, 33, 81));;">
+                <div class="frame"></div>
+                <img src="${project.image}" title="${project.attribution}">
             </div>
             <div class="project-info">
                 <div class="project-title titles">

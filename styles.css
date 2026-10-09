@@ -1,6 +1,5 @@
 /*https://www.magnific.com/free-vector/naive-computer-engineer-stickers-collection_54169860.htm#fromView=search&page=5&position=15&uuid=80d2953d-545a-4263-960b-8edc4b81f1a6&track=ais_hybrid&query=coding*/
 
-
 a {
     text-decoration: none;
 }
@@ -21,12 +20,13 @@ header {
 body {
     background-color: aliceblue;
     margin: 1rem;
-    color:rgb(45, 55, 86);
-    font-family: 'Montserrat';
+    color: rgb(88, 100, 124);
+    font-family: 'Inter', sans-serif;
 }
 
-header a {
+header a, .titles, .name, body a {
     color:rgb(45, 55, 86);
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -222,6 +222,45 @@ nav a:hover {
 .project-info {
     margin-left: 2rem;
 }
+
+.project-image {
+    position: relative;
+    min-height: 30rem;
+}
+
+.project-image img {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 70%;
+    margin-left: auto;
+}
+
+.frame { /*Code from https://www.smashingmagazine.com/2024/05/modern-guide-making-css-shapes/*/
+    position: absolute;
+    top: 4rem;
+    left: 3rem;
+    aspect-ratio: 1;
+
+    --b: 4rem; /* the boder thickness */
+    --a: 360deg; /* control the progression */
+    z-index: 0;
+    
+    width: 65%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: var(--b);
+    box-sizing: border-box;
+    background: linear-gradient(rgba(24, 42, 97, 0.70), rgba(137, 203, 219, 0.70));
+    --_g:/var(--b) var(--b) no-repeat radial-gradient(50% 50%,#000 97%,#0000 99%);
+    mask:
+        top var(--_g),
+        calc(50% + 50%*sin(var(--a)))
+        calc(50% - 50%*cos(var(--a))) var(--_g),
+        linear-gradient(#0000 0 0) content-box intersect,
+        conic-gradient(#000 var(--a),#0000 0);
+}
+
 
 .tool-container {
     display: flex;
