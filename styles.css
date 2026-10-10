@@ -22,7 +22,8 @@ header {
     top: 0;
     z-index: 100;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    background-color: rgb(250, 241, 255);
+    background-color: rgba(245, 227, 252, 0.50);
+    border-bottom: 1px solid rgb(245, 227, 252);
 }
 
 body {
@@ -33,7 +34,7 @@ body {
 }
 
 header a, .titles, .name, body a {
-    color:rgb(166, 150, 186);
+    color:rgb(167, 125, 182);
     font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
     font-weight: 500;
 }
@@ -43,7 +44,7 @@ nav {
     font-size: 0.9rem;
     font-weight: 500;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.3rem;
 }
 
 nav a:hover {
@@ -56,7 +57,7 @@ nav a:hover {
 }
 
 .logo a {
-    color:rgb(138, 109, 153);
+    color:rgb(164, 120, 174);
 }
 
 .contact {
@@ -94,7 +95,7 @@ nav a:hover {
     margin: 5% 10%;
     position: relative;
     backdrop-filter: blur(3px);
-    color:rgb(86, 83, 113);
+    color:rgb(102, 85, 142);
     font-size: 0.8rem;
     font-family: 'Roboto Mono', monospace;
     box-shadow: -5px 5px 10px 0px rgba(21, 4, 34, 0.15);
@@ -154,7 +155,7 @@ nav a:hover {
     left: -1.5rem;
     border-radius: 3ch;
     position: absolute;
-    background-image: linear-gradient(170deg, rgb(213, 153, 244), rgb(237, 181, 220));
+    background-image: linear-gradient(170deg, rgb(215, 136, 255), rgb(255, 181, 218));
 }
 
 .home-btns {
