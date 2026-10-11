@@ -1,5 +1,3 @@
-/*https://www.vecteezy.com/photo/69915269-liquid-motion-in-shades-of-lavender*/
-
 #hero {
     background-image: url("assets/images/bg15.jpg");/*https://www.magnific.com/free-vector/gradient-pastel-color-background_25672407.htm#fromView=detail&position=2&uuid=af740ed1-1e36-4b47-bfa1-d680d54624fc&track=ais_hybrid*/
     background-repeat: no-repeat;
@@ -27,17 +25,20 @@ header {
 }
 
 body {
-    background-color: aliceblue;
     color: rgb(88, 100, 124);
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background-color: rgb(255, 216, 247);
+    background-color: rgb(255, 243, 255);
 }
 
 header a, .titles, .name, body a {
     color:rgb(167, 125, 182);
     font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
     font-weight: 500;
+}
+
+#about, #projects {
+    margin: 2rem 2rem;
 }
 
 nav {
@@ -202,91 +203,52 @@ nav a:hover {
 
 #about {
     display: flex;
+    justify-content: space-around;
 }
 
 .about-img {
-    width: 15rem;
+    width: 20rem;
     height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 33% 67% 61% 39% / 75% 43% 57% 25%;
 }
 
 .professional-exp {
-    display: list-item;
+    gap: 2rem;
 }
 
-.school, .card-content {
-    position: relative;
-    margin-left: 0.5rem;
-    padding-left: 0.5rem;
+.school, .job-container {
+    padding: 0 1rem;
+    gap: 3rem;
+    display: flex;
 }
 
-.school::before, .card-content::before {
-    content: '';
-    height: 100%;
-    width: 5px;
-    top: 0;
-    left: -0.5rem;
-    border-radius: 3ch;
-    position: absolute;
-    background-image: linear-gradient(170deg, rgb(215, 136, 255), rgb(255, 181, 218));
-}
-
-#education {
-    margin-bottom: 1rem;
-}
-
-#education, #experience {
-    border-radius: 1.5ch;
-    padding: 1rem;
+.school:hover, .job-container:hover {
+    border-radius: 0.5ch;
+    box-shadow: 0 0 10px 1px rgba(83, 133, 181, 0.1);
     background-image: radial-gradient(transparent, transparent, rgba(255, 255, 255, 0.4));
     backdrop-filter: blur(3px);
     color:rgb(102, 85, 142);
-    box-shadow: 0 0 10px 1px rgba(21, 4, 34, 0.15);
+    box-shadow: 0 0 10px 1px rgba(21, 4, 34, 0.1);
     position: relative;
-}
-
-#education::before, #experience::before {
-    content: '';
-    position: absolute;
-    border-radius: 1.5ch;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    --b: 1px;
-    --a: 360deg;
-    padding: var(--b);
-    box-sizing: border-box;
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.60), transparent, rgba(255, 255, 255, 0.80));
-    --_g:/var(--b) var(--b);
-    mask:
-        top var(--_g),
-        calc(50% + 50%*sin(var(--a)))
-        calc(50% - 50%*cos(var(--a))) var(--_g),
-        linear-gradient(#0000 0 0) content-box intersect,
-        conic-gradient(#000 var(--a),#0000 0);
 }
 
 .title-container {
     display: flex;
     font-size: 1.5rem;
     gap: 1rem;
+    margin-bottom: -1rem;
 }
 
-.job {
-    display: block;
-}
-
-.bi-mortarboard-fill, .bi-briefcase-fill {
+.bi-mortarboard, .bi-briefcase {
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 2.5rem;
-    background-image: linear-gradient(120deg,rgb(181, 82, 234)0%, rgb(255, 126, 199)90%);
-    color: transparent;
-    background-clip: text;
+    color: rgb(181, 82, 234);
 }
 
 .item-title {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .skills-img {
