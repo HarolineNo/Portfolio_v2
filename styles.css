@@ -187,67 +187,52 @@ nav a:hover {
     font-size: 1.5rem;
 }
 
-#brief-intro {
-    padding: 1rem;
-    background-color: rgb(254, 237, 255);
-}
-
-#brief-intro p {
-    text-align: center;
-    padding: 1rem 2rem;
-    color:rgb(122, 96, 155);
-    font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
-    font-weight: 500;
-    font-size: 1.3rem;
-}
-
 #about {
     display: flex;
-    justify-content: space-around;
-}
-
-.about-img {
-    width: 20rem;
-    height: fit-content;
-    margin-top: auto;
-    margin-bottom: auto;
-    border-radius: 33% 67% 61% 39% / 75% 43% 57% 25%;
+    flex-direction: column;
 }
 
 .professional-exp {
-    background-image: linear-gradient(125deg, rgba(255, 255, 255, 0.7), transparent, rgba(255, 255, 255, 0.7));
-    box-shadow: 0 0 10px 1px rgba(21, 4, 34, 0.1);
-    padding: 2rem;
-    border-radius: 1.5ch;
-}
-
-.school, .job-container {
-    padding: 0 1rem;
-    gap: 3rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.school:hover, .job-container:hover {
-    border-radius: 0.5ch;
-    box-shadow: 0 0 10px 1px rgba(83, 133, 181, 0.1);
-    background-image: radial-gradient(transparent, transparent, rgba(255, 255, 255, 0.4));
-    backdrop-filter: blur(3px);
-    color:rgb(102, 85, 142);
-    box-shadow: 0 0 10px 1px rgba(21, 4, 34, 0.1);
+.item-content {
+    padding: 1rem;
+    width: 100%;
     position: relative;
+    cursor: pointer;
+    padding-top: 0;
+}
+
+.item-title {
+    margin-top: 0;
+}
+
+.exp {
+    display: none;
+}
+
+.item-content.active {
+    border-radius: 2ch;
+    background-image: linear-gradient(125deg, rgba(255, 255, 255, 0.7), transparent, rgba(255, 255, 255, 0.7));
+    box-shadow: 0 0 10px 0px rgba(21, 4, 34, 0.15);
+}
+
+.item-content.active .exp {
+    display: block;
+    transition: 0.5s ease-in-out;
 }
 
 .title-container {
     display: flex;
     font-size: 1.5rem;
     gap: 1rem;
-    margin-bottom: -1rem;
-}
-
-.bi-mortarboard, .bi-briefcase {
-    margin-top: auto;
-    margin-bottom: auto;
-    color: rgb(181, 82, 234);
 }
 
 .item-title {
@@ -304,7 +289,7 @@ nav a:hover {
     background-color: rgba(255, 225, 254, 0.5);
     border-radius: 10ch;
     padding: 0.3rem 1.5rem;
-    border: 2px solid rgb(161, 122, 167);
+    border: 2px solid rgb(132, 94, 138);
 }
 
 .btn {
