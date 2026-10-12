@@ -28,7 +28,11 @@ body {
     color: rgb(88, 100, 124);
     font-family: 'Poppins', monospace;
     margin: 0;
-    background-color: rgb(255, 243, 255);
+    background-color: rgb(251, 243, 253);
+}
+
+body p {
+    color: rgb(136, 116, 175);
 }
 
 header a, .titles, .name, body a {
@@ -184,7 +188,27 @@ nav a:hover {
 
 .titles {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    color: rgb(81, 56, 115);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.subtitles {
+    margin-bottom: 0;
+    position: relative;
+    font-size: 0.85rem;
+}
+
+.subtitles::after {
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: 3px;
+    bottom: 50%;
+    margin-left: 1rem;
+    border-radius: 1ch;
+    background-image: linear-gradient(170deg, rgb(182, 94, 226), rgb(249, 118, 205), transparent 80%);
 }
 
 #about {
@@ -250,18 +274,24 @@ nav a:hover {
 }
 
 .project-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
     gap: 5rem;
-    width: 80%;
-    margin: 10rem;
+    margin-bottom: 7rem;
 }
 
 .right-project {
     margin-left: auto;
+    grid-template-columns: 1fr 1.5fr;
 }
 
 .project-title {
     margin-top: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
+    color: rgb(81, 56, 115);
 }
 
 .project-img {
@@ -269,15 +299,8 @@ nav a:hover {
     display: flex;
     width: 100%;
     border-radius: 1ch;
-    box-shadow: 50px 50px 0 0 rgb(76, 58, 93);
-}
-
-.right-project-img {
-    position: relative;
-    display: flex;
-    width: 100%;
-    border-radius: 1ch;
-    box-shadow: -50px 50px 0 0 rgb(76, 58, 93);
+    border: 2px solid rgb(217, 206, 252);
+    box-shadow: 0 0 15px rgba(172, 160, 183, 0.5), 20px 20px 5px 0 rgb(232, 217, 246);
 }
 
 .tool-container {
@@ -286,10 +309,26 @@ nav a:hover {
 }
 
 .project-tools {
-    background-color: rgba(255, 225, 254, 0.5);
     border-radius: 10ch;
     padding: 0.3rem 1.5rem;
-    border: 2px solid rgb(132, 94, 138);
+    border: 1px solid rgb(201, 111, 226);
+    color: rgb(108, 80, 147);
+}
+
+.project-link {
+    color: rgb(199, 89, 233);
+    position: relative;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 1ch;
+    background-image: linear-gradient(170deg, rgb(193, 95, 242), rgb(252, 104, 255), transparent 80%);
 }
 
 .btn {
