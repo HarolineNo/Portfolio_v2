@@ -26,7 +26,7 @@ header {
 
 body {
     color: rgb(88, 100, 124);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', monospace;
     margin: 0;
     background-color: rgb(255, 243, 255);
 }
@@ -99,7 +99,7 @@ nav a:hover {
     backdrop-filter: blur(3px);
     color:rgb(102, 85, 142);
     font-size: 0.8rem;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     box-shadow: -5px 5px 10px 0px rgba(21, 4, 34, 0.15);
 }
 
@@ -131,7 +131,7 @@ nav a:hover {
     font-weight: 500;
     margin-bottom: 0;
     color: rgb(77, 70, 114);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', monospace;
 }
 
 .bi-arrow-down-circle {
@@ -189,7 +189,7 @@ nav a:hover {
 
 #brief-intro {
     padding: 1rem;
-    background-color: rgb(250, 164, 255);
+    background-color: rgb(254, 237, 255);
 }
 
 #brief-intro p {
@@ -215,7 +215,10 @@ nav a:hover {
 }
 
 .professional-exp {
-    gap: 2rem;
+    background-image: linear-gradient(125deg, rgba(255, 255, 255, 0.7), transparent, rgba(255, 255, 255, 0.7));
+    box-shadow: 0 0 10px 1px rgba(21, 4, 34, 0.1);
+    padding: 2rem;
+    border-radius: 1.5ch;
 }
 
 .school, .job-container {
@@ -361,6 +364,44 @@ nav a:hover {
 }
 
 footer {
-    position: relative;
-    background-image: linear-gradient(80deg, rgb(88, 0, 131), rgb(203, 0, 203), rgb(255, 213, 134)90%);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    padding: 2.5rem 2rem;
+    background-color: rgb(76, 58, 93);
+    color: rgb(160, 145, 173);
+    font-family: 'Poppins', monospace;
+    border-radius: 50px 50px 0 0;
+}
+
+footer a {
+    color: rgb(160, 145, 173);
+    font-family: 'Poppins', monospace;
+}
+
+.footer-title {
+    font-weight: 500;
+    color: rgb(246, 219, 255);
+    font-size: 1.2rem;
+    font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.contact-info {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-icons .bi:hover, footer a:hover {
+    color:rgb(229, 115, 233);
 }
