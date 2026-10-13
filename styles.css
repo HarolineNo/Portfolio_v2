@@ -160,15 +160,6 @@ nav a:hover {
     font-family: 'Poppins', monospace;
 }
 
-.bi-arrow-down-circle {
-    display: flex;
-    color: white;
-    font-size: 2rem;
-    justify-content: center;
-    bottom: 3rem;
-    position: relative;
-}
-
 .home-intro {
     width: 30em;
     position: relative;
@@ -293,6 +284,9 @@ nav a:hover {
 
 .tech-skills {
     font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(116, 101, 137);
+    margin-left: 2rem;
 }
 
 .bi-briefcase-fill, .bi-mortarboard-fill {
@@ -360,6 +354,15 @@ nav a:hover {
     box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
 }
 
+@keyframes loop {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: -100%;
+    }
+}
+
 .skill-name {
     display: flex;
     justify-content: center;
@@ -370,20 +373,35 @@ nav a:hover {
 .skills {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem;
+    animation: loop 10s infinite linear;
 }
 
 .skills-img {
     width: 3rem;
     height: 3rem;
     padding: 1rem 1.5rem;
+    padding-bottom: 0;
 }
 
 .skills-container {
+    flex: 0 0 5rem;
     border: 2px solid rgb(236, 224, 249);
     border-radius: 1ch;
     background: linear-gradient(148deg,rgba(255, 255, 255, 0.50) 30%, transparent 50%, rgba(255, 255, 255, 0.50) 70%);
+}
+
+.carousel {
+    width: 90%;
+    display: flex;
+    overflow-x: auto;
+    margin: auto;
+    mask: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .project-container {
