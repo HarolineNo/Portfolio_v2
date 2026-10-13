@@ -26,7 +26,6 @@
     background-size: cover;
     background-position: center;
     height: 115vh;
-    mask-image: linear-gradient(to bottom, white 70%, transparent 100%);
 }
 
 a {
@@ -236,7 +235,6 @@ nav a:hover {
 
 #about {
     display: flex;
-    flex-direction: column;
 }
 
 .professional-exp {
@@ -245,23 +243,19 @@ nav a:hover {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .item-content {
-    width: 100%;
+    width: 70%;
     position: relative;
     cursor: pointer;
     padding-top: 0;
+    margin-top: 1.5rem;
     background: radial-gradient(transparent, rgba(255, 255, 255, 0.30));
-    border: 1px solid rgb(204, 187, 202);
+    border: 2px solid rgb(236, 224, 249);
     padding: 0.5rem 1rem;
-    border-radius: 2ch;
-}
-
-.item-title {
-    margin-top: 0;
+    border-radius: 1ch;
 }
 
 .exp {
@@ -276,12 +270,94 @@ nav a:hover {
 .title-container {
     display: flex;
     font-size: 1.3rem;
-    justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.bi-plus-lg {
+    position: absolute;
+    right: 1rem;
+}
+
+.exp-type, .tech-skills {
+    color: rgb(81, 56, 115);
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+.exp-type {
+    margin-bottom: 0.5rem;
+}
+
+.tech-skills {
+    font-size: 1.5rem;
+}
+
+.bi-briefcase-fill, .bi-mortarboard-fill {
+    padding: 0.5rem;
+    background-image: linear-gradient(120deg,rgb(182, 94, 226), rgb(255, 107, 206));
+    color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+}
+
+.exp-icon-container {
+    background-color: rgba(236, 224, 249, 0.5);
+    border-radius: 1ch;
 }
 
 .item-title {
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-family: 'Poppins', monospace;
+    margin-top: 0;
+}
+
+.visible-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.hidden-item {
+    font-family: 'Poppins', monospace;
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-left: 4.5rem;
+}
+
+.exp-img {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.front-img {
+    width: 70%;
+    border-radius: 1ch;
+    border: 10px solid white;
+    z-index: 10;
+    transform: rotate(-2deg);
+    box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
+}
+
+.back-img {
+    width: 60%;
+    top: 3rem;
+    right: -6rem;
+    position: absolute;
+    border-radius: 1ch;
+    border: 10px solid white;
+    transform: rotate(5deg);
+    box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
 }
 
 .skill-name {
@@ -293,16 +369,19 @@ nav a:hover {
 
 .skills {
     display: flex;
-    justify-content: center;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .skills-img {
     width: 3rem;
     height: 3rem;
-    padding: 1rem;
-    border: 1px solid rgb(204, 187, 202);
+    padding: 1rem 1.5rem;
+}
+
+.skills-container {
+    border: 2px solid rgb(236, 224, 249);
     border-radius: 1ch;
     background: linear-gradient(148deg,rgba(255, 255, 255, 0.50) 30%, transparent 50%, rgba(255, 255, 255, 0.50) 70%);
 }
@@ -378,16 +457,6 @@ nav a:hover {
 
 .btn:hover {
     background-color: rgba(255, 255, 255, 0.51);
-}
-
-.previous {
-    left: 0;
-    position: absolute;
-}
-
-.next {
-    right: 0;
-    position: absolute;
 }
 
 footer {
