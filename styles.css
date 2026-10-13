@@ -329,8 +329,7 @@ nav a:hover {
 .exp-img {
     width: 30%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
     position: relative;
 }
 
