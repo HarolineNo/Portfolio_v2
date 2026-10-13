@@ -329,28 +329,37 @@ nav a:hover {
 .exp-img {
     width: 30%;
     display: flex;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    box-sizing: border-box;
+    padding: 1rem
 }
 
 .front-img {
-    width: 70%;
+    width: 60%;
     border-radius: 1ch;
     border: 10px solid white;
     z-index: 10;
-    transform: rotate(-2deg);
+    position: absolute;
+    top: 35%;
+    right: 30%;
+    transform: rotate(-5deg);
     box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
+    box-sizing: border-box;
 }
 
 .back-img {
-    width: 60%;
-    top: 3rem;
-    right: -6rem;
+    width: 50%;
+    top: 2%;
+    right: 5%;
     position: absolute;
+    z-index: 0;
+    transform: rotate(5deg);
     border-radius: 1ch;
     border: 10px solid white;
-    transform: rotate(5deg);
     box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
+    box-sizing: border-box;
 }
 
 @keyframes loop {
