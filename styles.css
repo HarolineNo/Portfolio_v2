@@ -25,6 +25,7 @@
     background-size: cover;
     background-position: center;
     height: 115vh;
+    mask: linear-gradient(black 75%, transparent);
 }
 
 a {
@@ -87,7 +88,7 @@ header a, .titles, .name, body a {
 }
 
 #about, #projects {
-    margin: 2rem 2rem;
+    margin: 5rem 2rem;
 }
 
 .navbar {
@@ -409,6 +410,7 @@ header a, .titles, .name, body a {
 .top-row {
     display: flex;
     justify-content: space-between;
+    font-weight: 800;
 }
 
 .exp-img {
@@ -659,8 +661,8 @@ footer {
     margin-top: 5rem;
     grid-template-columns: 1.5fr 1fr 1fr;
     padding: 2.5rem 2rem;
-    background-color: rgb(76, 58, 93);
-    color: rgb(160, 145, 173);
+    background-color: rgb(65, 37, 91);
+    color: rgb(182, 163, 198);
     font-family: 'Poppins', monospace;
     border-radius: 50px 50px 0 0;
     overflow: hidden;
@@ -670,7 +672,7 @@ footer {
 }
 
 footer a {
-    color: rgb(160, 145, 173);
+    color: rgb(182, 163, 198);
     font-family: 'Poppins', monospace;
 }
 
