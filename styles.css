@@ -21,8 +21,7 @@
 }
 
 #hero {
-    background-image: url("assets/images/bg15.jpg");/*https://www.magnific.com/free-vector/gradient-pastel-color-background_25672407.htm#fromView=detail&position=2&uuid=af740ed1-1e36-4b47-bfa1-d680d54624fc&track=ais_hybrid*/
-    background-repeat: no-repeat;
+    background-image: url("assets/images/bg15.jpg");
     background-size: cover;
     background-position: center;
     height: 115vh;
@@ -61,10 +60,17 @@ body {
     color: rgb(136, 116, 175);
     font-family: 'Poppins', monospace;
     margin: 0;
-    background-color: rgb(251, 243, 253);
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url("assets/images/body-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
 }
 
-#about p, #projects p, .item-content, .carousel {
+/*rgb(251, 243, 253)*/
+
+#about p, #projects p, .item-content, .carousel, .tech-skills {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
@@ -84,7 +90,7 @@ header a, .titles, .name, body a {
     margin: 2rem 2rem;
 }
 
-nav {
+.navbar {
     display: flex;
     font-size: 0.9rem;
     font-weight: 500;
@@ -92,8 +98,9 @@ nav {
     gap: 1.3rem;
 }
 
-nav a:hover {
+.navbar a:hover {
     color: rgb(255, 100, 237);
+    border-bottom: 3px solid rgb(255, 100, 237);
 }
 
 .logo {
@@ -216,7 +223,7 @@ nav a:hover {
     transform: scale(0.90);
 }
 
-.titles {
+.titles, .tech-skills {
     font-weight: 700;
     font-size: 2.5rem;
     color: rgb(81, 56, 115);
@@ -248,7 +255,10 @@ nav a:hover {
 .subtitles {
     margin-bottom: 0;
     position: relative;
-    font-size: 0.85rem;
+    color: rgb(114, 93, 189);
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
     animation: animate-titles linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -260,7 +270,7 @@ nav a:hover {
     width: 3rem;
     height: 3px;
     bottom: 50%;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     border-radius: 1ch;
     background-image: linear-gradient(170deg, rgb(182, 94, 226), rgb(249, 118, 205), transparent 80%);
 }
@@ -279,12 +289,11 @@ nav a:hover {
 }
 
 .item-content {
-    width: 70%;
+    width: 80%;
     position: relative;
-    cursor: pointer;
     padding-top: 0;
     margin-top: 1.5rem;
-    background: radial-gradient(transparent, rgba(255, 255, 255, 0.30));
+    background: radial-gradient(transparent, rgba(255, 255, 255, 0.6));
     border: 2px solid rgb(236, 224, 249);
     padding: 0.5rem 1rem;
     border-radius: 1ch;
@@ -299,7 +308,37 @@ nav a:hover {
 
 .item-content.active .exp {
     display: block;
-    transition: 0.5s ease-in-out;
+}
+
+.card-toggle {
+    position: absolute;
+    display: flex;
+    top: 1.5rem;
+    right: 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.card-toggle:hover {
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+.card-toggle .bi-chevron-up {
+    display: none;
+}
+
+.item-content.active .card-toggle .bi-chevron-up {
+    display: block;
+}
+
+.item-content.active .card-toggle .bi-chevron-down {
+    display: none;
+}
+
+.bi-chevron-up, .bi-chevron-down {
+    color: rgb(136, 116, 175);
 }
 
 .title-container {
@@ -310,13 +349,7 @@ nav a:hover {
     position: relative;
 }
 
-.bi-plus-lg {
-    position: absolute;
-    right: 1rem;
-    top: 0;
-}
-
-.exp-type, .tech-skills {
+.exp-type {
     color: rgb(81, 56, 115);
     font-weight: 700;
     font-size: 1.1rem;
@@ -328,9 +361,10 @@ nav a:hover {
 }
 
 .tech-skills {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: rgb(116, 101, 137);
+    margin-left: 2rem;
+}
+
+.tech-subtitles {
     margin-left: 2rem;
 }
 
@@ -343,7 +377,7 @@ nav a:hover {
 }
 
 .exp-icon-container {
-    background-color: rgba(236, 224, 249, 0.5);
+    background-color: rgba(236, 224, 249, 0.7);
     border-radius: 1ch;
 }
 
@@ -369,6 +403,12 @@ nav a:hover {
     font-size: 0.9rem;
     margin-top: 0;
     margin-left: 3.5rem;
+    border-top: 1px solid rgb(226, 214, 239);;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
 }
 
 .exp-img {
@@ -463,23 +503,24 @@ nav a:hover {
 
 .skills {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     margin: 1rem 0 1rem 0;
-    padding: 0.5rem;
+    padding: 1rem;
     animation: loop 10s infinite linear;
 }
 
 .skills-img {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     padding: 1rem 1.5rem;
     padding-bottom: 0;
 }
 
 .skills-container {
     flex: 0 0 5rem;
-    border: 2px solid rgb(236, 224, 249);
-    border-radius: 1ch;
+    box-shadow: 0 0 20px rgba(21, 4, 34, 0.1);
+    border-radius: 50%;
+    padding: 0.5rem;
     background: linear-gradient(148deg,rgba(255, 255, 255, 0.50) 30%, transparent 50%, rgba(255, 255, 255, 0.50) 70%);
 }
 
@@ -497,13 +538,13 @@ nav a:hover {
 
 .project-container, .right-project {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
     align-items: center;
-    gap: 5rem;
     margin-bottom: 7rem;
+    width: 95%;
 }
 
 .project-container {
+    grid-template-columns: 1.5fr 1fr;
     animation: appear linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -548,10 +589,16 @@ nav a:hover {
 .project-img {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 70%;
     border-radius: 1ch;
     border: 2px solid rgb(217, 206, 252);
-    box-shadow: 0 0 15px rgba(172, 160, 183, 0.5), 20px 20px 5px 0 rgb(232, 217, 246);
+    box-shadow: 0 0 15px rgba(172, 160, 183, 0.5), 5px 5px rgb(232, 217, 246);
+}
+
+.project-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tool-container {
@@ -569,17 +616,18 @@ nav a:hover {
 .project-link {
     color: rgb(199, 89, 233);
     position: relative;
+    padding-bottom: 0.5rem;
 }
 
 .project-link::after {
     content: '';
     position: absolute;
-    width: 3rem;
+    width: 100%;
     height: 3px;
     bottom: 0;
     left: 0;
     border-radius: 1ch;
-    background-image: linear-gradient(170deg, rgb(193, 95, 242), rgb(252, 104, 255), transparent 80%);
+    background-image: linear-gradient(170deg, transparent, rgb(193, 95, 242), rgb(252, 104, 255), transparent);
 }
 
 .btn {
@@ -652,4 +700,14 @@ footer a {
 
 .footer-icons .bi:hover, footer a:hover {
     color:rgb(229, 115, 233);
+}
+
+.footer-end {
+    display: flex;
+    font-size: 0.8rem;
+    width: 100%;
+    margin-top: 2rem;
+    justify-content: space-between;
+    border-top: 1px solid rgba(160, 145, 173, 0.5);
+    grid-column: 1 / -1;
 }

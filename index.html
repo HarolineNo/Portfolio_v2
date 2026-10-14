@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="toggle-cards.js" defer></script>
+        <script src="change-active.js" defer></script>
         <title>Portfolio</title>
         <link rel="stylesheet" href="styles.css"/>
     </head>
@@ -18,17 +19,15 @@
                 <div class = "logo">
                     <a href="#home">HAROLINE</a>
                 </div>
-                <nav>
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#education">Education</a>
-                    <a href="contact/" class="contact">
-                        Contact Me
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
+                <nav class="navbar">
+                    <a href="#home" class="nav-item">Home</a>
+                    <a href="#about" class="nav-item">About</a>
+                    <a href="#projects" class="nav-item">Projects</a>
                 </nav>
+                <a href="contact/" class="contact" target="_blank" rel="noreferrer">
+                    Contact Me
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </header>
 
             <section id="home">
@@ -45,11 +44,11 @@
                         <p>COMPUTER SCIENCE STUDENT | ASPIRING WEB AND SOFTWARE DEVELOPER </p>
                         <p class="home-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <div class="home-btns">
-                            <a href="resume/" class="resume-btn">
+                            <a href="resume/" class="resume-btn" target="_blank" rel="noreferrer">
                                 <i class="bi bi-person-fill"></i>
                                 View My Resume
                             </a>
-                            <a href="github/" class="git-btn">
+                            <a href="github/" class="git-btn" target="_blank" rel="noreferrer">
                                 <i class="bi bi-rocket-takeoff-fill"></i>
                                 GitHub
                             </a>
@@ -78,14 +77,20 @@
                                 <p class="exp-type">Education</p>
                                 <p class="item-title">Western Governors University <span style="margin-left: 0.5rem; margin-right: 0.5rem">•</span> Oct. 2025 - Jan. 2027 (Expected)</p>
                             </div>
-                            <i class="bi bi-plus-lg"></i>
                         </div>
                         <div class="exp">
                             <div class="hidden-item">
-                                <p>Remote</p>
-                                <p>Accelerated BS/MS in Computer Science</p>
+                                <div class="top-row">
+                                    <p>Remote</p>
+                                    <p>Accelerated BS/MS in Computer Science</p>
+                                </div>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, veritatis!</p>
                             </div>
                         </div>
+                        <button class="card-toggle">
+                            <i class="bi bi-chevron-up"></i>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
                     </div>
 
                     <div class="item-content">
@@ -97,15 +102,20 @@
                                 <p class="exp-type">Experience</p>
                                 <p class="item-title">National STEM Honor Society <span style="margin-left: 0.5rem; margin-right: 0.5rem">•</span> Jan. 2025 - Apr. 2025</p>
                             </div>
-                            <i class="bi bi-plus-lg"></i>
                         </div>
                         <div class="exp">
                             <div class="hidden-item">
-                                <p>Remote</p>
-                                <p>Website and Technology Intern</p>
-                                <p>[Description]</p>
+                                <div class="top-row">
+                                    <p>Remote</p>
+                                    <p>Website and Technology Intern</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aut sapiente tenetur harum quis cumque repellendus corrupti quasi assumenda quaerat!</p>
                             </div>
                         </div>
+                        <button class="card-toggle">
+                            <i class="bi bi-chevron-up"></i>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -116,7 +126,8 @@
         </section>
 
         <section id="technical-skills">
-            <h2 class="tech-skills">Technical Skills</h2>
+            <p class="tech-subtitles subtitles">TECHNICAL SKILLS</p>
+            <h2 class="tech-skills">Tools & Technologies</h2>
             <div class="carousel">
                 <div class="skills">
                     <div class="skills-container">
@@ -200,25 +211,24 @@
         <section id="projects">
             <p class="subtitles">SELECTED WORKS</p>
             <h2 class="titles">Projects</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, temporibus.</p>
+            <p style="margin-bottom: 5rem;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, temporibus.</p>
             <div class="project-container">
                 <div class="project-image-container">
-                    <img class="project-img" src="assets/images/placeholder.png" title="Project Title">
+                    <img class="project-img" src="assets/images/truck-routing.png" title="Image of program code">
                 </div>
                 <div class="project-info">
                     <div>
-                        <p class="project-title">Project Title</p>
+                        <p class="project-title">Truck Routing</p>
                     </div>
                     <div class="tool-container">
-                        <span class="project-tools">Tool</span>
-                        <span class="project-tools">Tool</span>
-                        <span class="project-tools">Tool</span>
+                        <span class="project-tools">Python</span>
+                        <span class="project-tools">PyCharm</span>
                     </div>
                     <div class="project-summary">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ex recusandae numquam esse ratione libero, corrupti nostrum. Possimus tempore non accusantium placeat dicta veniam molestias debitis, porro accusamus, consequuntur, fugit ipsa libero corrupti ut repellat quod minima soluta magnam facere!</p>
                     </div>
-                    <a class="project-link" href="project/">
-                        Link
+                    <a class="project-link" href="https://gitfront.io/r/HarolineNo/mH4LSPbeqJDw/Truck-Routing-Program/" target="_blank" rel="noreferrer">
+                        View Project
                         <i class="bi bi-arrow-right-short"></i>
                     </a>
                 </div>
@@ -237,8 +247,8 @@
                     <div class="project-summary">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ex recusandae numquam esse ratione libero, corrupti nostrum. Possimus tempore non accusantium placeat dicta veniam molestias debitis, porro accusamus, consequuntur, fugit ipsa libero corrupti ut repellat quod minima soluta magnam facere!</p>
                     </div>
-                    <a class="project-link" href="project/">
-                        Link
+                    <a class="project-link" href="project/" target="_blank" rel="noreferrer">
+                        View Project
                         <i class="bi bi-arrow-right-short"></i>
                     </a>
                 </div>
@@ -249,22 +259,21 @@
 
             <div class="project-container">
                 <div class="project-image-container">
-                    <img class="project-img" src="assets/images/placeholder.png" title="Project Title">
+                    <img class="project-img" src="assets\images\ambulance-path.png" title="Image of program code">
                 </div>
                 <div class="project-info">
                     <div>
-                        <p class="project-title">Project Title</p>
+                        <p class="project-title">Ambulance Shortest Path</p>
                     </div>
                     <div class="tool-container">
-                        <span class="project-tools">Tool</span>
-                        <span class="project-tools">Tool</span>
-                        <span class="project-tools">Tool</span>
+                        <span class="project-tools">Python</span>
+                        <span class="project-tools">PyCharm</span>
                     </div>
                     <div class="project-summary">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ex recusandae numquam esse ratione libero, corrupti nostrum. Possimus tempore non accusantium placeat dicta veniam molestias debitis, porro accusamus, consequuntur, fugit ipsa libero corrupti ut repellat quod minima soluta magnam facere!</p>
                     </div>
-                    <a class="project-link" href="project/">
-                        Link
+                    <a class="project-link" href="https://gitfront.io/r/HarolineNo/Ak4g7LX3JwQe/Ambulance-Shortest-Path/" target="_blank" rel="noreferrer">
+                        View Project
                         <i class="bi bi-arrow-right-short"></i>
                     </a>
                 </div>
@@ -277,10 +286,10 @@
             <p class="footer-title">HAROLINE</p>
             <p style="margin-top: 0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat animi recusandae, architecto quod iure tempora!</p>
             <div class="footer-icons">
-                <a href="mailto:harolinenoesi@gmail.com" target="_blank">
+                <a href="mailto:harolinenoesi@gmail.com" target="_blank" rel="noreferrer">
                     <i class="bi bi-envelope-fill"></i>
                 </a>
-                <a href="https://github.com/HarolineNo" target="_blank">
+                <a href="https://github.com/HarolineNo" target="_blank" rel="noreferrer">
                     <i class="bi bi-github"></i>
                 </a>
             </div>
@@ -293,12 +302,17 @@
         </div>
         <div class="footer-section">
             <p class="footer-title">Credits</p>
-            <a href="https://www.magnific.com/free-vector/gradient-pastel-color-background_25672407.htm#fromView=detail&position=2&uuid=af740ed1-1e36-4b47-bfa1-d680d54624fc&track=ais_hybrid">Landing Page Background</a>
-            <a href="https://www.vecteezy.com/photo/33197419-a-delightful-collage-of-vintage-office-supplies-on-a-soft-pink-surface-generative-ai">Front Image</a>
-            <a href="https://www.vecteezy.com/photo/71227092-modern-wireless-computer-mouse-placed-beside-a-rose-gold-laptop-on-a-pink-pastel-workspace-with-flowers">Back Image</a>
-            <a href="https://www.flaticon.com/">Logo Resources</a>
-            <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+            <a href="https://www.magnific.com/free-vector/gradient-pastel-color-background_25672407.htm#fromView=detail&position=2&uuid=af740ed1-1e36-4b47-bfa1-d680d54624fc&track=ais_hybrid" target="_blank" rel="noreferrer">Landing Page Background</a>
+            <a href="https://www.vecteezy.com/vector-art/27392992-elegant-hand-painted-alcohol-ink-background" target="_blank" rel="noreferrer">Body Background</a>
+            <a href="https://www.vecteezy.com/photo/33197419-a-delightful-collage-of-vintage-office-supplies-on-a-soft-pink-surface-generative-ai" target="_blank" rel="noreferrer">Front Image</a>
+            <a href="https://www.vecteezy.com/photo/71227092-modern-wireless-computer-mouse-placed-beside-a-rose-gold-laptop-on-a-pink-pastel-workspace-with-flowers" target="_blank" rel="noreferrer">Back Image</a>
+            <a href="https://www.flaticon.com/" target="_blank" rel="noreferrer">Logo Resources</a>
+            <a href="https://icons.getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap Icons</a>
+        </div>
+        <div class="footer-end">
+            <p>Designed by Haroline Noesi</p>
+            <p>Built in 2026</p>
         </div>
     </footer>
 
-</h
+</html>
