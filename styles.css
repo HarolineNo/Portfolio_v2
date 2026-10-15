@@ -178,7 +178,7 @@ body {
 
 .last-name {
     display: flex;
-    background:linear-gradient(90deg, rgb(142, 44, 255), rgb(255, 150, 231)50%);
+    background: linear-gradient(90deg, rgb(142, 44, 255), rgb(255, 150, 231)50%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: -1rem;
@@ -709,8 +709,10 @@ footer a {
         background-image: url("assets/images/bg15.jpg");
         background-size: cover;
         background-position: center;
-        height: 115vh;
-        mask: linear-gradient(black 75%, transparent);
+        height: 70dvh;
+        mask: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        background-blend-mode: lighten;
     }
 
     a {
@@ -728,10 +730,6 @@ footer a {
         background-color: rgb(255, 251, 255);
         justify-content: space-between;
         box-sizing: border-box;
-    }
-
-    #about {
-        width: 100vw;
     }
 
     @keyframes appear {
@@ -818,18 +816,18 @@ footer a {
 
     .home-page {
         padding: 3rem 0;
-        background-image: linear-gradient(125deg, rgba(255, 255, 255, 0.7), transparent, rgba(255, 255, 255, 0.7));
+        background-image: none;
         border-radius: 1ch;
         width: fit-content;
         display: flex;
-        margin: 0 0 5%;
-        top: 15%;
+        margin: 0;
+        top: 0;
         position: relative;
         backdrop-filter: blur(3px);
         color: rgb(102, 85, 142);
         font-size: 0.8rem;
         font-family: 'Poppins', monospace;
-        box-shadow: -5px 5px 10px 0px rgba(21, 4, 34, 0.15);
+        box-shadow: none;
     }
 
     .home-page::before {
@@ -844,46 +842,66 @@ footer a {
         --a: 360deg;
         padding: var(--b);
         box-sizing: border-box;
-        background: linear-gradient(125deg, transparent, rgba(255, 255, 255, 0.60), transparent, rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.80));
-        --_g:/var(--b) var(--b);
-        mask:
-            top var(--_g),
-            calc(50% + 50%*sin(var(--a)))
-            calc(50% - 50%*cos(var(--a))) var(--_g),
-            linear-gradient(#0000 0 0) content-box intersect,
-            conic-gradient(#000 var(--a),#0000 0);
+        background: none;
+        mask: none;
+    }
+
+    .home-info {
+        background-color: rgba(255, 251, 255, 0.8);
+        text-align: center;
+        padding: 3rem 1rem;
+        margin: 3rem auto 0 auto;
+        font-size: 0.9rem;
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    }
+
+    .greeting {
+        margin-top: 3rem;
+    }
+
+    .comp-student {
+        margin-top: 0;
+    }
+
+    .hello {
+        margin: auto auto 0 1rem;
+        font-size: 1rem;
+        color: rgb(77, 70, 114);
     }
 
     .name {
         font-size: 4.5rem;
-        margin-top: 0;
-        font-weight: 500;
-        margin-bottom: 0;
+        margin: auto auto 0 1rem;
+        font-weight: 700;
         color: rgb(77, 70, 114);
         font-family: 'Poppins', monospace;
+        display: flex;
+        flex-direction: column;
     }
 
     .last-name {
         display: flex;
-        background:linear-gradient(90deg, rgb(142, 44, 255), rgb(255, 150, 231)50%);
+        background: linear-gradient(90deg, rgb(142, 44, 255), rgb(255, 150, 231) 40%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-top: -1rem;
     }
 
     .home-intro {
-        width: 30em;
+        width: 100%;
         position: relative;
-        margin-left: 1.5rem;
+        margin: 0 auto 1.5rem;
+        text-align: center;
+        display: flex;
     }
 
     .home-intro::before {
         content: '';
-        height: 100%;
-        width: 5px;
+        height: 0;
+        width: 0;
         top: 0;
-        left: -1.5rem;
-        border-radius: 3ch;
+        left: 0;
+        border-radius: 0;
         position: absolute;
         background-image: linear-gradient(170deg, rgb(215, 136, 255), rgb(255, 181, 218));
     }
@@ -891,6 +909,7 @@ footer a {
     .home-btns {
         display: flex;
         gap: 1rem;
+        justify-content: center;
     }
 
     .git-btn {
@@ -967,11 +986,12 @@ footer a {
     }
 
     .journey {
-        margin-left: 2rem;
+        margin-left: 1rem;
+        margin-top: 5rem;
     }
 
     .professional-exp {
-        margin-left: 2rem;
+        margin-left: 1rem;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -1051,11 +1071,11 @@ footer a {
     }
 
     .tech-skills {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 
     .tech-subtitles {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 
     .bi-briefcase-fill, .bi-mortarboard-fill {
@@ -1121,6 +1141,7 @@ footer a {
         position: relative;
         box-sizing: border-box;
         padding: 1rem;
+        margin-top: 5rem;
     }
 
     @keyframes pop-up-front {
@@ -1237,7 +1258,7 @@ footer a {
     }
 
     .project-header {
-        margin: 5rem auto auto 2rem;
+        margin: 5rem auto auto 1rem;
     }
 
     .project-container {
