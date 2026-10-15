@@ -1,4 +1,8 @@
-/*add loading animation*/
+/*
+add loading animation
+remember to add working links
+bigger media query?
+*/
 
 #progress {
     top: 0;
@@ -695,10 +699,125 @@ footer a {
     grid-column: 1 / -1;
 }
 
+@media (max-width: 1023px){
+
+    #home {
+        mask: none;
+    }
+
+    body {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    #about {
+        margin-bottom: 0;
+    }
+
+    .professional-exp {
+        margin-left: 1rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+
+    .item-content {
+        position: relative;
+        width: 80dvw;
+        padding-top: 0;
+        margin-top: 2rem;
+        background: radial-gradient(transparent, rgba(255, 255, 255, 0.6));
+        border: 2px solid rgb(236, 224, 249);
+        padding: 0.5rem 1rem;
+        border-radius: 1ch;
+    }
+
+    .exp-img {
+        display: flex;
+        width: 30%;
+        height: 5rem;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    .front-img {
+        width: 6.5rem;
+        aspect-ratio: 9/13;
+        flex-shrink: 1;
+        border: 5px solid white;
+        z-index: 10;
+        position: absolute;
+        top: 2rem;
+        right: 5rem;
+        box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
+        box-sizing: border-box;
+    }
+
+    .back-img {
+        width: 6.5rem;
+        top: 1rem;
+        flex-shrink: 1;
+        right: 0.8rem;
+        position: absolute;
+        z-index: 0;
+        border-radius: 1ch;
+        border: 5px solid white;
+        box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
+        box-sizing: border-box;
+    }
+
+    .project-header {
+        margin: 5rem auto auto 1rem;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 5rem;
+        width: 100vw;
+        grid-template-columns: none;
+    }
+
+    #projects {
+        margin: 0;
+    }
+
+    .project-title {
+        margin-top: 1.5rem;
+        font-weight: 700;
+        font-size: 1.3rem;
+        font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
+        color: rgb(81, 56, 115);
+    }
+
+    .project-info {
+        padding: 0 1rem;
+    }
+
+    .project-img {
+        position: relative;
+        display: flex;
+        width: 100vw;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        margin-left: 0;
+    }
+
+    .project-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
 
     #home {
         background-image: url("assets/images/bg15.jpg");
@@ -737,12 +856,6 @@ footer a {
         background-size: cover;
         background-position: center;
         background-blend-mode: soft-light;
-    }
-
-    #about p, #projects p, .item-content, .carousel, .tech-skills {
-        animation: appear linear;
-        animation-timeline: view();
-        animation-range: entry 0% cover 30%;
     }
 
     .nav-item, .titles, .name, body a {
@@ -857,7 +970,7 @@ footer a {
     }
 
     .name {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         margin: auto auto 0 1rem;
         font-weight: 700;
         color: rgb(77, 70, 114);
@@ -918,13 +1031,10 @@ footer a {
 
     .titles, .tech-skills {
         font-weight: 700;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: rgb(81, 56, 115);
         margin-top: 0;
         margin-bottom: 0;
-        animation: animate-titles linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 60%;
     }
 
     .subtitles {
@@ -934,9 +1044,6 @@ footer a {
         font-size: 0.7rem;
         font-weight: 600;
         font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
-        animation: animate-titles linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
     }
 
     .subtitles::after {
@@ -976,9 +1083,6 @@ footer a {
         border: 2px solid rgb(236, 224, 249);
         padding: 0.5rem 1rem;
         border-radius: 1ch;
-        animation: pop-right linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
     }
 
     .title-container {
@@ -1074,23 +1178,22 @@ footer a {
     }
 
     .front-img {
-        width: 6rem;
-        border-radius: 1ch;
+        width: 5rem;
+        aspect-ratio: 9/13;
+        flex-shrink: 1;
         border: 5px solid white;
         z-index: 10;
         position: absolute;
         top: 5.5rem;
-        right: 2rem;
+        right: 1.1rem;
         box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
         box-sizing: border-box;
-        animation: pop-up-front linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 50%;
     }
 
     .back-img {
-        width: 5rem;
+        width: 4.5rem;
         top: 1rem;
+        flex-shrink: 1;
         right: 0.8rem;
         position: absolute;
         z-index: 0;
@@ -1098,9 +1201,6 @@ footer a {
         border: 5px solid white;
         box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
         box-sizing: border-box;
-        animation: pop-up-back linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
     }
 
     .skills {
@@ -1122,9 +1222,6 @@ footer a {
         margin: 0 0 5rem;
         width: 100vw;
         grid-template-columns: none;
-        animation: appear linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
     }
 
     .project-title {
@@ -1211,9 +1308,6 @@ footer a {
         color: rgb(182, 163, 198);
         font-family: 'Poppins', monospace;
         border-radius: 0;
-        animation: slide-up linear both;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
     }
 
     footer a {
@@ -1264,3 +1358,4 @@ footer a {
     }
 
 }
+
