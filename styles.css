@@ -1,5 +1,9 @@
 /*add loading animation*/
 
+* {
+    outline: 1px solid red;
+}
+
 #progress {
     top: 0;
     position: fixed;
@@ -87,7 +91,7 @@ body {
 }
 
 #about, #projects {
-    margin: 5rem 2rem;
+    margin: 5rem 0 5rem 2rem;
 }
 
 .navbar {
@@ -433,7 +437,7 @@ body {
     }
     100% {
         opacity: 1;
-        transform: translate(0) scale(1) rotate(-5deg);
+        transform: translate(0) scale(1) rotate(-10deg);
         filter: blur(0px);
     }
 }
@@ -455,14 +459,13 @@ body {
 }
 
 .front-img {
-    width: 60%;
+    width: 15rem;
     border-radius: 1ch;
     border: 5px solid white;
     z-index: 10;
     position: absolute;
-    top: 35%;
-    right: 30%;
-    transform: rotate(-5deg);
+    top: 10rem;
+    right: 7rem;
     box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
     box-sizing: border-box;
     animation: pop-up-front linear both;
@@ -471,12 +474,11 @@ body {
 }
 
 .back-img {
-    width: 50%;
-    top: 2%;
-    right: 5%;
+    width: 11rem;
+    top: 0.5rem;
+    right: 2rem;
     position: absolute;
     z-index: 0;
-    transform: rotate(5deg);
     border-radius: 1ch;
     border: 5px solid white;
     box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
@@ -702,6 +704,10 @@ footer a {
 
 @media (max-width: 600px) {
 
+    * {
+        outline: 1px solid red;
+    }
+
     #home {
         background-image: url("assets/images/bg15.jpg");
         background-size: cover;
@@ -725,6 +731,10 @@ footer a {
         background-color: rgb(255, 251, 255);
         justify-content: space-between;
         box-sizing: border-box;
+    }
+
+    #about {
+        width: 100vw;
     }
 
     @keyframes appear {
@@ -905,7 +915,7 @@ footer a {
 
     .titles, .tech-skills {
         font-weight: 700;
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: rgb(81, 56, 115);
         margin-top: 0;
         margin-bottom: 0;
@@ -969,7 +979,6 @@ footer a {
     }
 
     .item-content {
-        width: 80%;
         position: relative;
         padding-top: 0;
         margin-top: 1.5rem;
@@ -1093,13 +1102,14 @@ footer a {
     }
 
     .exp-img {
-        width: 30%;
         display: flex;
+        width: 30%;
+        height: 5rem;
         justify-content: center;
         align-items: center;
         position: relative;
         box-sizing: border-box;
-        padding: 1rem
+        padding: 1rem;
     }
 
     @keyframes pop-up-front {
@@ -1113,7 +1123,7 @@ footer a {
         }
         100% {
             opacity: 1;
-            transform: translate(0) scale(1) rotate(-5deg);
+            transform: translate(0) scale(1) rotate(-10deg);
             filter: blur(0px);
         }
     }
@@ -1129,20 +1139,19 @@ footer a {
         }
         100% {
             opacity: 1;
-            transform: translate(0) scale(1) rotate(5deg);
+            transform: translate(0) scale(1) rotate(7deg);
             filter: blur(0px);
         }
     }
 
     .front-img {
-        width: 60%;
+        width: 6rem;
         border-radius: 1ch;
         border: 5px solid white;
         z-index: 10;
         position: absolute;
-        top: 35%;
-        right: 30%;
-        transform: rotate(-5deg);
+        top: 5.5rem;
+        right: 3rem;
         box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
         box-sizing: border-box;
         animation: pop-up-front linear both;
@@ -1151,12 +1160,11 @@ footer a {
     }
 
     .back-img {
-        width: 50%;
-        top: 2%;
-        right: 5%;
+        width: 5rem;
+        top: 1rem;
+        right: 0.7rem;
         position: absolute;
         z-index: 0;
-        transform: rotate(5deg);
         border-radius: 1ch;
         border: 5px solid white;
         box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
@@ -1187,7 +1195,7 @@ footer a {
         gap: 2rem;
         margin: 1rem 0 1rem 0;
         padding: 1rem;
-        animation: loop 10s infinite linear;
+        animation: loop 15s infinite linear;
     }
 
     .skills-img {
@@ -1349,7 +1357,7 @@ footer a {
         flex-direction: column;
         font-size: 0.9rem;
         margin-left: 0;
-        margin-right: auto;
+        margin-right: 0;
     }
 
     .contact-info {
