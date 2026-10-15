@@ -1,9 +1,5 @@
 /*add loading animation*/
 
-* {
-    outline: 1px solid red;
-}
-
 #progress {
     top: 0;
     position: fixed;
@@ -703,10 +699,11 @@ footer a {
 
 
 @media (max-width: 600px) {
-
+/*
     * {
         outline: 1px solid red;
     }
+*/
 
     #home {
         background-image: url("assets/images/bg15.jpg");
@@ -969,17 +966,21 @@ footer a {
         display: flex;
     }
 
+    .journey {
+        margin-left: 2rem;
+    }
+
     .professional-exp {
-        margin: 0;
-        padding: 0;
+        margin-left: 2rem;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        margin-bottom: 1rem;
+        margin-bottom: 5rem;
     }
 
     .item-content {
         position: relative;
+        width: 80dvw;
         padding-top: 0;
         margin-top: 1.5rem;
         background: radial-gradient(transparent, rgba(255, 255, 255, 0.6));
@@ -1089,7 +1090,7 @@ footer a {
 
     .hidden-item {
         font-family: 'Poppins', monospace;
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin-top: 0;
         margin-left: 3.5rem;
         border-top: 1px solid rgb(226, 214, 239);;
@@ -1097,9 +1098,19 @@ footer a {
 
     .top-row {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        font-weight: 800;
+        font-weight: 600;
     }
+
+    .location {
+        margin-bottom: 0.5rem;
+    }
+
+    .description {
+        margin-top: 0;
+    }
+
 
     .exp-img {
         display: flex;
@@ -1151,7 +1162,7 @@ footer a {
         z-index: 10;
         position: absolute;
         top: 5.5rem;
-        right: 3rem;
+        right: 2rem;
         box-shadow: 5px 5px 10px rgba(21, 4, 34, 0.15);
         box-sizing: border-box;
         animation: pop-up-front linear both;
@@ -1162,7 +1173,7 @@ footer a {
     .back-img {
         width: 5rem;
         top: 1rem;
-        right: 0.7rem;
+        right: 0.8rem;
         position: absolute;
         z-index: 0;
         border-radius: 1ch;
