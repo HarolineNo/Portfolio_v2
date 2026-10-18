@@ -1073,4 +1073,12 @@ footer a {
         justify-content: center;
     }
 
+    .bi-briefcase-fill, .bi-mortarboard-fill {
+        padding: 0.5rem;
+        background-image: linear-gradient(120deg, var(--mid-purple), var(--mid-pink));
+        color: transparent;
+        background-clip: text;
+        font-size: 2rem;
+    }
+
 }
