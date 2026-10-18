@@ -624,7 +624,7 @@ footer a {
     grid-column: 1 / -1;
 }
 
-@media (max-width: 1023px){
+@media (max-width: 1024px){
 
     #home {
         mask: none;
@@ -739,7 +739,7 @@ footer a {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     #home {
         mask: none;
@@ -875,6 +875,7 @@ footer a {
 
     .hidden-item {
         font-size: 1rem;
+        margin-left: 0;
     }
 
     .top-row {
@@ -927,7 +928,7 @@ footer a {
     }
 
     .project-info {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
 
     .project-img {
@@ -971,10 +972,23 @@ footer a {
         flex-direction: column;
     }
 
+    .bi-briefcase-fill, .bi-mortarboard-fill {
+        display: none;
+    }
+
+    #progress {
+        display: none;
+    }
+
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
-        #home {
+@media (max-width: 768px) and (orientation: landscape) {
+    
+    html {
+        width: 100%;
+    }
+    
+    #home {
         mask: none;
         height: auto;
         background-color: rgba(255, 255, 255, 0.3);
@@ -1074,11 +1088,22 @@ footer a {
     }
 
     .bi-briefcase-fill, .bi-mortarboard-fill {
-        padding: 0.5rem;
-        background-image: linear-gradient(120deg, var(--mid-purple), var(--mid-pink));
-        color: transparent;
-        background-clip: text;
-        font-size: 2rem;
+        display: none;
+    }
+
+    #progress {
+        display: none;
+    }
+
+    .visible-item, .hidden-item {
+        font-size: 0.8rem;
+    }
+
+    .project-img {
+        border-radius: 1ch;
+        border: 2px solid var(--border);
+        width: 60%;
+        height: auto;
     }
 
 }
