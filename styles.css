@@ -16,17 +16,6 @@
     --border: rgb(236, 224, 249);
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 @keyframes growProgress {
     from {
         transform: scaleX(0);
@@ -43,44 +32,6 @@
     to {
         translate: -100%;
     }
-}
-
-@keyframes pop-up-front {
-    0% {
-        opacity: 0;
-        transform: translate(-50%) scale(2);
-        filter: blur(5px);
-    }
-    65% {
-        transform: translate(5%) scale(0.95);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0) scale(1) rotate(-10deg);
-        filter: blur(0px);
-    }
-}
-
-@keyframes pop-up-back {
-    0% {
-        opacity: 0;
-        transform: translate(-50%) scale(2);
-        filter: blur(5px);
-    }
-    65% {
-        transform: translate(5%) scale(0.95);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0) scale(1) rotate(5deg);
-        filter: blur(0px);
-    }
-}
-
-#about, #projects, #technical-skills, footer {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
 }
 
 #progress {
@@ -267,6 +218,7 @@ body {
     font-size: 0.8rem;
     font-weight: 500;
     border-radius: 30px;
+    backdrop-filter: blur(3px);
     position: relative;
 }
 
@@ -455,13 +407,11 @@ body {
     border: 5px solid white;
     z-index: 10;
     position: absolute;
+    transform: rotate(-10deg);
     top: 10rem;
     right: 7rem;
     box-shadow: 5px 5px 10px var(--shadow);
     box-sizing: border-box;
-    animation: pop-up-front linear both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
 }
 
 .back-img {
@@ -470,13 +420,11 @@ body {
     right: 2rem;
     position: absolute;
     z-index: 0;
+    transform: rotate(7deg);
     border-radius: 1ch;
     border: 5px solid white;
     box-shadow: 5px 5px 10px var(--shadow);
     box-sizing: border-box;
-    animation: pop-up-back linear both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
 }
 
 .skill-name {
@@ -489,7 +437,7 @@ body {
 .skills {
     display: flex;
     gap: 2rem;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 0 0;
     padding: 1rem;
     animation: loop 10s infinite linear;
 }
@@ -534,9 +482,6 @@ body {
     width: 80%;
     grid-template-areas: "image info";
     grid-template-columns: 1.5fr 1fr;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
 }
 
 .right-project {
@@ -686,7 +631,7 @@ footer a {
     }
 
     body {
-        background-color: var(--white-half);
+        background-color: rgba(255, 255, 255, 0.7);
     }
 
     #about {
@@ -982,7 +927,7 @@ footer a {
     }
 
     .project-info {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
 
     .project-img {
@@ -1028,3 +973,104 @@ footer a {
 
 }
 
+@media (max-width: 767px) and (orientation: landscape) {
+        #home {
+        mask: none;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.3);
+        background-blend-mode: lighten;
+    }
+
+    header {
+        position: static;
+        width: 100dvw;
+        justify-content: center;
+    }
+
+    .nav-item {
+        color:rgb(174, 138, 214);
+    }
+
+    #about, #projects {
+        margin: 0;
+    }
+
+    .navbar {
+        gap: 2rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .home-page {
+        padding: 3rem 0 0;
+        background-image: none;
+        margin: 0;
+        top: 0;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .home-page::before {
+        background: none;
+        mask: none;
+    }
+
+    .home-info {
+        background-color: rgba(255, 251, 255, 0.8);
+        text-align: center;
+        padding: 3rem 1rem;
+        margin: 5rem auto 0 auto;
+        font-size: 0.9rem;
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .greeting {
+        margin-top: 3rem;
+    }
+
+    .comp-student {
+        margin-top: 0;
+    }
+
+    .hello {
+        margin: auto auto 0 1rem;
+        font-size: 1rem;
+        color: var(--header);
+    }
+
+    .name {
+        font-size: 3.5rem;
+        margin: auto auto 0 1rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .last-name {
+        background: linear-gradient(90deg, var(--mid-purple), var(--mid-pink) 40%);
+        background-clip: text;
+    }
+
+    .home-intro {
+        width: 100%;
+        margin: 0 auto 1.5rem;
+        text-align: center;
+        display: flex;
+    }
+
+    .home-intro::before {
+        height: 0;
+        width: 0;
+        left: 0;
+        border-radius: 0;
+    }
+
+    .home-btns {
+        justify-content: center;
+    }
+
+}
