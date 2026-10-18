@@ -3,6 +3,7 @@ add loading animation
 bigger media query?
 update media queries redundant code
 add accessibility
+center projects, no left margin
 */
 
 :root {
@@ -545,11 +546,17 @@ body {
     display: none;
 }
 
+.all-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .project-container {
     display: grid;
     align-items: center;
     margin-bottom: 7rem;
-    width: 95%;
+    width: 80%;
     grid-template-areas: "image info";
     grid-template-columns: 1.5fr 1fr;
     animation: appear linear both;
@@ -561,7 +568,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     grid-template-areas: "info image";
-    margin-left: 7rem;
 }
 
 .project-title {
@@ -572,6 +578,7 @@ body {
     font-family: 'Montserrat', Impact, 'Arial Narrow Bold', sans-serif;
     color: rgb(81, 56, 115);
 }
+
 
 .project-status {
     margin-top: 0.3rem;
@@ -596,9 +603,13 @@ body {
 
 .project-image-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     grid-area: image;
+}
+
+.right-image-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .tool-container {
@@ -607,6 +618,10 @@ body {
 }
 
 .project-tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     border-radius: 10ch;
     padding: 0.3rem 1.5rem;
     border: 1px solid rgb(201, 111, 226);
@@ -854,7 +869,7 @@ footer a {
     header {
         display: flex;
         align-items: center;
-        position: fixed;
+        position: static;
         top: 0;
         z-index: 100;
         width: 100dvw;
@@ -1279,6 +1294,7 @@ footer a {
         padding: 0.3rem 1.5rem;
         border: 1px solid rgb(201, 111, 226);
         color: rgb(108, 80, 147);
+        font-size: 0.9rem;
     }
 
     .project-link {
